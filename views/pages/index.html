@@ -17,19 +17,20 @@
                             <b>e</b>Logistics</a>
                         </div>
                         <!-- /.login-logo -->
-                        <% if (message.length > 0) { %>
-                                <div class="alert alert-danger"><%= message %></div>
-                        <% } %>
-            
                         <div class="login-box-body">
-                            <p class="login-box-msg">Sign in to start your session</p>
-                            <form id="frmLogin" action="/login" method="post">
+                              <% if (message.length > 0) { %>
+                              <p class="login-box-msg"><%= message %></p>
+                            <% } else { %>
+                                <p class="login-box-msg">Sign In Bro</p>
+                            <% } %>
+                            
+                            <form id="frmLogin" action="/login" method="POST">
                                 <div class="form-group has-feedback">
-                                    <input type="email" id="x_login_username" class="form-control" placeholder="Email">
+                                    <input type="email" id="login_username" name="username" class="form-control" placeholder="Email">
                                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <input type="password" id="x_login_password" class="form-control" placeholder="Password">
+                                    <input type="password" id="login_password" name="password" class="form-control" placeholder="Password">
                                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                                 </div>
                                 <div class="row">
