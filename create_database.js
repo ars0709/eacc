@@ -11,7 +11,6 @@ CREATE TABLE `' + dbconfig.database + '`.`users` ( \
     UNIQUE INDEX `username_UNIQUE` (`username` ASC) \
 )'
 );
-
 console.log('Success: Database Created!')
 connection.end();
 
